@@ -1,0 +1,46 @@
+<div>
+	<h2>Criar Veículo</h2>
+</div>
+<br/>
+<div>
+    <botao-voltar></botao-voltar>
+</div>
+
+<form [formGroup]="veiculoForm" (ngSubmit)="onSubmit()" class="row">
+	<div class="col-12 col-md-6 mb-3">
+		<div class="card">
+			<div class="card-body"> 
+				<div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="placa">Placa *</label>
+						<input type="text" class="form-control form-control-sm" id="placa" formControlName="placa"  required autoFocus>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="marca">Marca *</label>
+						<input type="text" class="form-control form-control-sm" id="marca" formControlName="marca" required>
+					</div>
+				</div>
+                <div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="modelo">Modelo *</label>
+						<input type="text" class="form-control form-control-sm" id="modelo" formControlName="modelo" required>
+					</div> 
+					<div class="form-group col-sm-6">
+						<label for="cor">Cor *</label>
+						<input type="text" class="form-control form-control-sm" id="cor" formControlName="cor" required>
+					</div> 
+				</div>
+                <div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="ano">Ano *</label>
+						<input type="number" class="form-control form-control-sm" id="ano" formControlName="ano" required>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<button class="btn btn-primary btn-acao mr-2" type="submit" [disabled]="!veiculoForm.valid">Salvar</button>
+	</div>
+</form>

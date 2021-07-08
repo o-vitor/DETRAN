@@ -1,0 +1,45 @@
+<div>
+    <h2>Condutores</h2>
+</div>
+
+<div>
+    <botao-novo routerLink="/condutores/criar"></botao-novo>
+</div>
+<br/>
+<div>
+    <botao-voltar></botao-voltar>
+</div>
+
+<br/>
+
+<div> 
+    <p-table [value]="condutores" class="table table-striped table-bordered table-hover">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>E-mail</th>                            
+                <th>CNH</th>
+                <th>Data Nascimento</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-condutor>
+            <tr>
+                <td>{{condutor.id}}</td>
+                <td>{{condutor.nome}}</td>
+                <td>{{condutor.cpf}}</td>
+                <td>{{condutor.telefone}}</td>
+                <td>{{condutor.email}}</td>
+                <td>{{condutor.cnh}}</td>
+                <td>{{condutor.dataNascimento | date: 'dd/MM/yyyy'}}</td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-primary" routerLink="/condutores/editar/{{condutor.id}}">Alterar</button>
+                    <button type="button" class="btn btn-sm btn-danger" (click)="excluirCondutor(condutor.id)">Excluir</button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

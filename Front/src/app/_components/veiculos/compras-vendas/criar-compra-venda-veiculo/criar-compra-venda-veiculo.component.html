@@ -1,0 +1,57 @@
+ <div>
+	<h2>Criar Compra/Venda de Veículo</h2>
+</div>
+<br/>
+<div>
+    <botao-voltar></botao-voltar>
+</div>
+
+<form [formGroup]="veiculoCompraVendaForm" (ngSubmit)="onSubmit()" class="row">
+	<div class="col-12 col-md-6 mb-3">
+		<div class="card">
+			<div class="card-body"> 
+                <div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="idVeiculo">Veículo *</label>
+						<select class="form-control form-control-sm" name="idVeiculo" id="idVeiculo" formControlName="idVeiculo">
+                            <option value=""></option>
+                            <ng-container *ngFor="let veiculo of listaVeiculos">
+                                <option value="{{veiculo.id}}">{{veiculo.id}} - {{veiculo.marca}} - {{veiculo.modelo}} - {{veiculo.anoFabricacao}}</option>
+                            </ng-container>
+                        </select>
+					</div> 
+				</div>
+				<div class="form-row">
+                    <div class="form-group col-sm-6"> 
+                        <label for="idComprador">Comprador *</label>
+                        <select class="form-control form-control-sm" name="idComprador" id="idComprador" formControlName="idComprador">
+                            <option value=""></option>
+                            <ng-container *ngFor="let condutor of listaCondutores">
+                                <option value="{{condutor.id}}">{{condutor.id}} - {{condutor.nome}} - {{condutor.cpf}}</option>
+                            </ng-container>
+                        </select>
+                    </div> 
+					<div class="form-group col-sm-6">
+						<label for="idVendedor">Vendedor</label>
+						<select class="form-control form-control-sm" name="idVendedor" id="idVendedor" formControlName="idVendedor">
+                            <option value=""></option>
+                            <ng-container *ngFor="let condutor of listaCondutores">
+                                <option value="{{condutor.id}}">{{condutor.id}} - {{condutor.nome}} - {{condutor.cpf}}</option>
+                            </ng-container>
+                        </select>
+					</div>
+				</div>
+                <div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="data">Data *</label>
+						<input type="date" class="form-control form-control-sm" id="data" formControlName="data" required>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<button class="btn btn-primary btn-acao mr-2" type="submit" [disabled]="!veiculoCompraVendaForm.valid">Salvar</button>
+	</div>
+</form>

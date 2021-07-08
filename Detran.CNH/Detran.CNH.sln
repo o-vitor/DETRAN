@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detran.CNH.API", "Detran.CNH\Detran.CNH.API.csproj", "{BAD4504C-7F0B-41F3-A73D-B39626EAF368}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detran.CNH.Application", "Detran.CNH.Application\Detran.CNH.Application.csproj", "{070AE28E-1359-47F5-8BE0-EA9A96C822F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detran.CNH.Infra.Data", "Detran.CNH.Infra.Data\Detran.CNH.Infra.Data.csproj", "{43C252E6-E02A-4A2D-AD8D-4494F1FAD20B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detran.CNH.Domain", "Detran.CNH.Domain\Detran.CNH.Domain.csproj", "{650AFDE0-FE91-4593-9524-BE0ADECF8F31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detran.CNH.Infra.IoC", "Detran.CNH.Infra.IoC\Detran.CNH.Infra.IoC.csproj", "{E286A2A9-DF14-435B-B4D8-87C3A6594BA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAD4504C-7F0B-41F3-A73D-B39626EAF368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAD4504C-7F0B-41F3-A73D-B39626EAF368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAD4504C-7F0B-41F3-A73D-B39626EAF368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAD4504C-7F0B-41F3-A73D-B39626EAF368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{070AE28E-1359-47F5-8BE0-EA9A96C822F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{070AE28E-1359-47F5-8BE0-EA9A96C822F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{070AE28E-1359-47F5-8BE0-EA9A96C822F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{070AE28E-1359-47F5-8BE0-EA9A96C822F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C252E6-E02A-4A2D-AD8D-4494F1FAD20B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C252E6-E02A-4A2D-AD8D-4494F1FAD20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C252E6-E02A-4A2D-AD8D-4494F1FAD20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C252E6-E02A-4A2D-AD8D-4494F1FAD20B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650AFDE0-FE91-4593-9524-BE0ADECF8F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650AFDE0-FE91-4593-9524-BE0ADECF8F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650AFDE0-FE91-4593-9524-BE0ADECF8F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650AFDE0-FE91-4593-9524-BE0ADECF8F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E286A2A9-DF14-435B-B4D8-87C3A6594BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E286A2A9-DF14-435B-B4D8-87C3A6594BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E286A2A9-DF14-435B-B4D8-87C3A6594BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E286A2A9-DF14-435B-B4D8-87C3A6594BA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3408193F-1A79-4379-94C9-B6FFFAB94DFB}
+	EndGlobalSection
+EndGlobal

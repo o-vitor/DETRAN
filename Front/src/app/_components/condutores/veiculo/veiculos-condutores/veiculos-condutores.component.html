@@ -1,0 +1,61 @@
+<div>
+    <h2>
+        Histórico de Condutores de Veículo
+    </h2>
+</div>
+ 
+<br/>
+<div>
+    <botao-voltar></botao-voltar>
+</div>
+
+<br/>
+<form class="row"  [formGroup]="formBuscar" (ngSubmit)="buscarCondutoresVeiculo()">
+    <div class="col-12 mb-3">
+        <div class="card">
+            <div class="card-body"> 
+                <div class="form-row">
+                    <div class="col-12 col-sm-4">
+                        <label for="placa">Placa do Veículo *</label>
+                        <input type="text" formControlName="placa" class="form-control form-control-sm" required>
+                        <br/>
+                        <button type="button" class="btn btn-sm btn-success" type="submit" [disabled]="!formBuscar.valid">
+                            Buscar
+                        </button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+  </form>
+  
+<div *ngIf="comprasVendas.length > 0" class="card">
+    <div>
+        Veículo: {{veiculo.marca}} {{veiculo.modelo}} -- {{veiculo.anoFabricacao}}
+    </div>
+    <br/>
+    <p-table [value]="comprasVendas" class="table table-striped table-bordered table-hover">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>E-mail</th>                            
+                <th>CNH</th>
+                <th>Data Nascimento</th> 
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-compraVenda>
+            <tr>
+                <td>{{compraVenda.condutorComprador.id}}</td>
+                <td>{{compraVenda.condutorComprador.nome}}</td>
+                <td>{{compraVenda.condutorComprador.cpf}}</td>
+                <td>{{compraVenda.condutorComprador.telefone}}</td>
+                <td>{{compraVenda.condutorComprador.email}}</td>
+                <td>{{compraVenda.condutorComprador.cnh}}</td>
+                <td>{{compraVenda.condutorComprador.dataNascimento | date: 'dd/MM/yyyy'}}</td> 
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

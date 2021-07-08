@@ -1,0 +1,50 @@
+<div>
+	<h2>Alterar Condutor</h2>
+</div>
+<br/>
+<div>
+    <botao-voltar></botao-voltar>
+</div>
+
+<form [formGroup]="condutorForm" (ngSubmit)="onSubmit()" class="row">
+	<div class="col-12 col-md-6 mb-3">
+		<div class="card">
+			<div class="card-body"> 
+				<div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="nome">Nome *</label>
+						<input type="text" class="form-control form-control-sm" id="nome" formControlName="nome" required autoFocus>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="cpf">CPF *</label>
+						<input type="text" class="form-control form-control-sm" id="cpf" formControlName="cpf" required>
+					</div> 
+				</div>
+                <div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="telefone">Telefone *</label>
+						<input type="text" class="form-control form-control-sm" id="telefone" formControlName="telefone" required>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="email">E-mail</label>
+						<input type="text" class="form-control form-control-sm" id="email" formControlName="email">
+					</div> 
+				</div>
+                <div class="form-row">
+					<div class="form-group col-sm-6">
+						<label for="cnh">CNH *</label>
+						<input type="text" class="form-control form-control-sm" id="cnh" formControlName="cnh" required>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="dataNascimento">Data de Nascimento</label>
+						<input type="date" class="form-control form-control-sm" id="dataNascimento" formControlName="dataNascimento" required>
+					</div> 
+				</div> 
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<button class="btn btn-primary btn-acao mr-2" type="submit" [disabled]="!condutorForm.valid">Salvar</button>
+	</div>
+</form>
