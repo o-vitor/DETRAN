@@ -29,6 +29,9 @@
   ```
     http://localhost:4200/
   ```
+  
+  Apenas um usuário existe no banco após executar o script: e-mail: **admin@teste.com**, senha: **123456**
+	
 ## Lista de bibliotecas/*frameworks* utilizados
 
 - .NET Core versão 3.1
